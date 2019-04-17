@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+import java.util.*;
 /**
  *
  * @author Estudiante
@@ -20,12 +20,8 @@ public class CuentaBancaria {
         this.clave = clave;
     }
 
-    
-
-   
-
-    public boolean consignar(float valor){
-            if(valor >0){
+    public boolean Consignar(float valor){
+            if(valor > 0){
                 this.saldo += valor;
                 return true;
             }else return false;
@@ -44,10 +40,12 @@ public class CuentaBancaria {
     
     public boolean cambiarClave(int nuevaClave){
         if(nuevaClave <= 9999){
+            this.clave = nuevaClave;
             return true;
         }else return false;
+        
     }
-    
+      
 
     public int getNúmero() {
         return número;
